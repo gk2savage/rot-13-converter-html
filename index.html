@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Rot 13 Converter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/soon.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+  </head>
+  <!-- START BODY -->
+  <body class="nomobile">
+
+    <!-- START HEADER -->
+    <section id="header">
+        <div class="container">
+           
+                <!-- HEADLINE -->
+                <h1 data-animated="GoIn"><b>ROT13</b> Converter</h1>
+                <h4 data-animated="GoIn">@gk2savage @punisherxoxo</h4>
+           
+           <script type="text/javascript">
+    function rot(s, i) {
+      return s.replace(/[a-zA-Z]/g, function (c) {
+        return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
+      });
+    }
+    function update() {
+      document.getElementById('output').value = rot(document.getElementById('input').value, +document.getElementById('rot').value);
+    }
+  </script>
+         <p><textarea id="input" cols="80" rows="7" onkeyup="update()" style="color: black;" onchange="update()" autofocus></textarea></p>
+
+<p class="arrow">↓</p>
+
+<p style="color: black;"><select id="rot" onchange="update()">
+  <option value="1">ROT1</option>
+  <option value="2">ROT2</option>
+  <option value="3">ROT3</option>
+  <option value="4">ROT4</option>
+  <option value="5">ROT5</option>
+  <option value="6">ROT6</option>
+  <option value="7">ROT7</option>
+  <option value="8">ROT8</option>
+  <option value="9">ROT9</option>
+  <option value="10">ROT10</option>
+  <option value="11">ROT11</option>
+  <option value="12">ROT12</option>
+  <option value="13" selected>ROT13</option>
+  <option value="14">ROT14</option>
+  <option value="15">ROT15</option>
+  <option value="16">ROT16</option>
+  <option value="17">ROT17</option>
+  <option value="18">ROT18</option>
+  <option value="19">ROT19</option>
+  <option value="20">ROT20</option>
+  <option value="21">ROT21</option>
+  <option value="22">ROT22</option>
+  <option value="23">ROT23</option>
+  <option value="24">ROT24</option>
+  <option value="25">ROT25</option>
+</select></p>
+
+<p class="arrow">↓</p>
+
+<p><textarea id="output" cols="80" rows="7" style="color: black;" readonly></textarea></p>
+
+
+
+
+        </div>
+        <!-- LAYER OVER THE SLIDER TO MAKE THE WHITE TEXTE READABLE -->
+        <div id="layer"></div>
+        <!-- END LAYER -->
+        <!-- START SLIDER -->
+        <div id="slider" class="rev_slider">
+            <ul>
+              <li data-transition="slideleft" data-slotamount="1" data-thumb="assets/img/slider/1.jpg">
+                <img src="assets/img/slider/1.jpg">
+              </li>
+              <li data-transition="slideleft" data-slotamount="1" data-thumb="assets/img/slider/2.jpg">
+                <img src="assets/img/slider/2.jpg">
+              </li>
+              <li data-transition="slideleft" data-slotamount="1" data-thumb="assets/img/slider/3.jpg">
+                <img src="assets/img/slider/3.jpg">
+              </li>
+              <li data-transition="slideleft" data-slotamount="1" data-thumb="assets/img/slider/4.jpg">
+                <img src="assets/img/slider/4.jpg">
+              </li>
+            </ul>
+        </div>
+        <!-- END SLIDER -->
+    </section>
+    <!-- END HEADER -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/soon/plugins.js"></script>
+    <script src="assets/js/soon/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/soon/custom.js"></script>
+  </body>
+  <!-- END BODY -->
+</html>
